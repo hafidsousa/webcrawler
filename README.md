@@ -29,6 +29,7 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 - [TODO] API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).
 - [TODO] Automated CI/CD Pipelines [Version 2](#diagram-v2-todo).
 - [TODO] UI [Version 2](#diagram-v2-todo).
+- [TODO] Add contract, component, integration and performance tests [Version 2].
 - Crawling depth must be defined.
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
@@ -51,7 +52,7 @@ Gradle 4.1 (Or just use provided Gradle wrapper)
 
 ```
 
-## Running the tests
+## Running Unit tests
 
 Explain how to run the automated tests for this system
 
@@ -71,6 +72,7 @@ gradle test
 * [AWS SQS](https://aws.amazon.com/sqs/) - Messaging Provider
 * [AWS DynamoDB](https://aws.amazon.com/documentation/dynamodb/) - NoSQL Database
 * [Jsoup](https://jsoup.org/) - Java HTML Parser
+* [Wiremocks](http://wiremock.org/) - Mock URLs for testing
 
 ## Diagram v2 (TODO)
 ![Diagram](public/images/crawler_v2.png)
