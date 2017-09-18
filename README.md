@@ -27,7 +27,7 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 - Crawling depth must be defined.
 - The API Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
 - In-Memory cache to reduce response time. [Version 2](#diagram-v2-todo).
-- API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo)..
+- API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
 >
