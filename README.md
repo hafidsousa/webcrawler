@@ -16,11 +16,11 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 * A version the [Depth-first search (DFS)](https://en.wikipedia.org/wiki/Depth-first_search) algorithm has been implemented. The search starts from the seed URL and traverses the sub-pages until the pre-defined depth limit is reached, or there are no more sub-pages.
 * Using [netty.io](https://netty.io/) client with non-blocking calls and multiple threads.
 * If the Seed URL exists:
-  * Reply to the client with existing record.
-* If the Seed URL has not been crawled before:
+  * Reply with existing record.
+* If the Seed URL doesn't exist:
   * Create a record in a READY state and send a response back to the client.
-  * Send request to the queue.
-  * The batch server picks up the request and update the record to IN_PROGRESS.
+  * Send the request to the queue.
+  * The batch server picks up the request and updates the record to IN_PROGRESS.
   * Once the task is completed save the record to the database. If successful set status to COMPLETED, otherwise FAILED.
 
 ### Limitations
