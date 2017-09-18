@@ -18,14 +18,14 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 * If the Seed URL exists:
   * Reply with existing record.
 * If the Seed URL doesn't exist:
-  * Create a record in a READY state and send a response back to the client.
+  * Create a record in a NEW state and reply to the API Consumer.
   * Send the request to the queue.
   * The batch server picks up the request and updates the record to IN_PROGRESS.
   * Once the task is completed save the record to the database. If successful set status to COMPLETED, otherwise FAILED.
 
 ### Limitations
 - Crawling depth must be defined.
-- Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
+- The API Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
 - In-Memory cache to reduce response time. Also on [Version 2](#diagram-v2-todo).
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
