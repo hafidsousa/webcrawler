@@ -3,7 +3,7 @@
 A Recursive Web crawler built in Java 8 with reactive streams, async queues and AWS DynamoDB.
 
 ## Problem
-Crawling Web sites is an expensive task, and it comes with some challenges.
+Crawling Web sites is an intensive task, and it comes with some challenges.
 
 * How to crawl sub-pages when the website hierarchy is unknown?
 * How to crawl websites efficiently?
