@@ -26,7 +26,8 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 ### Limitations
 - Crawling depth must be defined.
 - The API Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
-- In-Memory cache to reduce response time. Also on [Version 2](#diagram-v2-todo).
+- In-Memory cache to reduce response time. [Version 2](#diagram-v2-todo).
+- API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo)..
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
 >
@@ -71,6 +72,11 @@ gradle test
 
 ## Diagram v2 (TODO)
 ![Diagram](public/images/crawler_v2.png)
+
+* Add Redis In-Memory cache.
+* Add AWS API Gateway (API Management).
+* Add Lambda function to be triggered on DynamoDB events.
+* Add SNS Notification.
 
 ## Author
 
