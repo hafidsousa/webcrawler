@@ -1,42 +1,47 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.0.M4'
-	}
-	repositories {
-		mavenCentral()
-		maven { url "https://repo.spring.io/snapshot" }
-		maven { url "https://repo.spring.io/milestone" }
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    ext {
+        springBootVersion = "2.0.0.M4"
+        awsJavaSdkVersion = "1.11.196"
+        apacheCommonsLangVersion = "3.6"
+        jsoupVersion = "1.10.3"
+        amazonSqsLibVersion = "1.0.4"
+        wiremockVersion = "2.8.0"
+    }
+    repositories {
+        mavenCentral()
+        maven {url "https://repo.spring.io/snapshot"}
+        maven {url "https://repo.spring.io/milestone"}
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
 }
 
-apply plugin: 'java'
-apply plugin: 'eclipse'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
+apply plugin: "java"
+apply plugin: "eclipse"
+apply plugin: "org.springframework.boot"
+apply plugin: "io.spring.dependency-management"
 
-version = '0.0.1-SNAPSHOT'
+version = "0.0.1-SNAPSHOT"
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
-	maven { url "https://repo.spring.io/snapshot" }
-	maven { url "https://repo.spring.io/milestone" }
+    mavenCentral()
+    maven {url "https://repo.spring.io/snapshot"}
+    maven {url "https://repo.spring.io/milestone"}
 }
 
-
 dependencies {
-	compile('org.springframework.boot:spring-boot-starter-webflux')
-	compile('org.springframework:spring-jms')
-	compile('org.jsoup:jsoup:1.10.3')
-	compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.6'
-	compile group: 'com.amazonaws', name: 'aws-java-sdk', version: '1.11.196'
-	compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.196'
-	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.196'
-	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.4'
-	runtime('org.springframework.boot:spring-boot-devtools')
-	testCompile('org.springframework.boot:spring-boot-starter-test')
-	testCompile('io.projectreactor:reactor-test')
+    compile("org.springframework.boot:spring-boot-starter-webflux")
+    compile("org.springframework:spring-jms")
+    compile("org.jsoup:jsoup:${jsoupVersion}")
+    compile("org.apache.commons:commons-lang3:${apacheCommonsLangVersion}")
+    compile("com.amazonaws:aws-java-sdk:${awsJavaSdkVersion}")
+    compile("com.amazonaws:aws-java-sdk-dynamodb:${awsJavaSdkVersion}")
+    compile("com.amazonaws:aws-java-sdk-sqs:${awsJavaSdkVersion}")
+    compile("com.amazonaws:amazon-sqs-java-messaging-lib:${amazonSqsLibVersion}")
+    runtime("org.springframework.boot:spring-boot-devtools")
+    testCompile("org.springframework.boot:spring-boot-starter-test")
+    testCompile("io.projectreactor:reactor-test")
+    testCompile("com.github.tomakehurst:wiremock:${wiremockVersion}")
 }

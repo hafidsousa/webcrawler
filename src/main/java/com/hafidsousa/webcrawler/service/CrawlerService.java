@@ -23,7 +23,7 @@ import java.util.Map;
 /**
  * @author Hafid Ferreira Sousa
  */
-@Service
+@Service("crawlerService")
 public class CrawlerService implements ICrawlerService {
 
     private static final Logger LOG = LoggerFactory.getLogger(CrawlerService.class);
@@ -75,7 +75,7 @@ public class CrawlerService implements ICrawlerService {
         putItemRequest.setTableName(Utils.table.websites);
         HashMap<String, AttributeValue> newWebsite = new HashMap<>();
         newWebsite.put(Utils.params.url, new AttributeValue(url));
-        newWebsite.put(Utils.params.status, new AttributeValue(EStatus.READY.name()));
+        newWebsite.put(Utils.params.status, new AttributeValue(EStatus.NEW.name()));
         putItemRequest.setItem(newWebsite);
 
         return Mono.fromFuture(

@@ -1,4 +1,4 @@
-package com.hafidsousa.webcrawler.service;
+package com.hafidsousa.webcrawler.task;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 
@@ -7,7 +7,7 @@ import java.net.URISyntaxException;
 /**
  * @author Hafid Ferreira Sousa
  */
-public interface ICrawlerBatchService {
+public interface ICrawlerBatchTask {
 
     void getDeepCrawling(String requestJSON) throws URISyntaxException, JsonProcessingException;
 }

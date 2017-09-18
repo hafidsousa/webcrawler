@@ -30,13 +30,13 @@ public final class Utils {
 
     public static final class params {
 
-        public static final String url = "URL";
+        public static final String url = "url";
 
-        public static final String status = "STATUS";
+        public static final String status = "status";
 
-        public static final String title = "TITLE";
+        public static final String title = "title";
 
-        public static final String nodes = "NODES";
+        public static final String nodes = "nodes";
     }
 
     public static final class error {
@@ -53,5 +53,13 @@ public final class Utils {
     public static final class success {
 
         public static final String saved_dynamo = "Saved item {}";
+        public static final String log_recursion= "Depth <%d> || Base URL <%s> || Child URL <%s>";
+    }
+
+    public static final class document {
+
+        public static final String links = "a[href]";
+        public static final String link_url = "abs:href";
+        public static final String log_recursion= "Depth <%d> || Base URL <%s> || Child URL <%s>";
     }
 }

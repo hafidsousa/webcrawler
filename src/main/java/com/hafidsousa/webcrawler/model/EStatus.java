@@ -5,7 +5,7 @@ package com.hafidsousa.webcrawler.model;
  */
 public enum EStatus {
 
-    READY,
+    NEW,
     PROCESSING,
     COMPLETED,
     ERROR
