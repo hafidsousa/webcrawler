@@ -29,7 +29,7 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 - [TODO] API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).
 - [TODO] Automated CI/CD Pipelines [Version 2](#diagram-v2-todo).
 - [TODO] UI [Version 2](#diagram-v2-todo).
-- [TODO] Add contract, component, integration and performance tests [Version 2].
+- [TODO] Add contract, component, integration and performance tests [Version 2](#diagram-v2-todo).
 - Crawling depth must be defined.
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
