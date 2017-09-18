@@ -24,12 +24,12 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
   * Once the task is completed save the record to the database. If successful set status to COMPLETED, otherwise FAILED.
 
 ### Limitations
-- Crawling depth must be defined.
-- [TODO] The API Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
+- [TODO] The API Consumer is not notified when the crawling process is completed [Version 2](#diagram-v2-todo).
 - [TODO] In-Memory cache to reduce response time. [Version 2](#diagram-v2-todo).
 - [TODO] API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).
 - [TODO] Automated CI/CD Pipelines [Version 2](#diagram-v2-todo).
 - [TODO] UI [Version 2](#diagram-v2-todo).
+- Crawling depth must be defined.
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
 >
