@@ -28,6 +28,8 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
 - The API Consumer is not notified when the crawling process is completed. This will adressed on [Version 2](#diagram-v2-todo).
 - In-Memory cache to reduce response time. [Version 2](#diagram-v2-todo).
 - API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).
+- Automated CI/CD Pipelines [Version 2](#diagram-v2-todo).
+- UI [Version 2](#diagram-v2-todo).
 - Only nodes prefixed with the Seed URL will be recursed.
 > **Example:**
 >
@@ -77,6 +79,9 @@ gradle test
 * Add AWS API Gateway (API Management).
 * Add Lambda function to be triggered on DynamoDB events.
 * Add SNS Notification.
+* Infrastructure as a code using AWS Cloud Formation.
+* Pipeline as a Code using Jenkis.
+* Angular 4 UI.
 
 ## Author
 
