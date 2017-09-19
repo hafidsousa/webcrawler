@@ -49,8 +49,7 @@ These instructions will get you a copy of the project up and running on your **l
 ```
 Java8
 Gradle 4.1 (Or just use provided Gradle wrapper)
-
-To Run the application in a Integrated Environment you must configure AWS DynamoDB Endpoints and AWS SQS.
+To Run the application in a Integrated Environment you must configure AWS DynamoDB and SQS endpoints at `src/main/resources/application.properties`.
 
 ```
 ## Build
