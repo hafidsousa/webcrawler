@@ -50,11 +50,16 @@ These instructions will get you a copy of the project up and running on your **l
 Java8
 Gradle 4.1 (Or just use provided Gradle wrapper)
 
+To Run the application in a Integrated Environment you must configure AWS DynamoDB Endpoints and AWS SQS.
+
+```
+## Build
+
+```
+gradle clean build
 ```
 
 ## Running Unit tests
-
-Explain how to run the automated tests for this system
 
 ```
 gradle test
