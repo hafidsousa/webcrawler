@@ -1,6 +1,6 @@
 # A Reactive Web Crawler
 
-A Recursive Web crawler built in Java 8 with reactive streams, async queues and AWS DynamoDB.
+A Recursive Web crawler built with Java 8, reactive streams, async queues and AWS DynamoDB.
 
 ## Problem
 Crawling Web sites is an intensive task, and it comes with some challenges.
