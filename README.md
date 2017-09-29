@@ -24,6 +24,7 @@ Crawling Web sites is an intensive task, and it comes with some challenges.
   * Once the task is completed save the record to the database. If successful set status to COMPLETED, otherwise FAILED.
 
 ### Limitations
+- [TODO] Read and Respect robots.txt [Version 2](#diagram-v2-todo).
 - [TODO] The API Consumer is not notified when the crawling process is completed [Version 2](#diagram-v2-todo).
 - [TODO] In-Memory cache to reduce response time. [Version 2](#diagram-v2-todo).
 - [TODO] API Security mechanisms: Request logging, throttling and auditing [Version 2](#diagram-v2-todo).

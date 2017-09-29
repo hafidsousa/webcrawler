@@ -28,17 +28,17 @@ import java.util.Objects;
 @Service
 public class CrawlerBatchTask implements ICrawlerBatchTask {
 
-    private static final Logger LOG = LoggerFactory.getLogger(CrawlerBatchTask.class);
-
-    private AmazonDynamoDBAsync dynamoDBAsync;
-
-    private ICrawlerBatchService crawlerBatchService;
-
     public CrawlerBatchTask(AmazonDynamoDBAsync dynamoDBAsync, ICrawlerBatchService crawlerBatchService) {
 
         this.dynamoDBAsync = dynamoDBAsync;
         this.crawlerBatchService = crawlerBatchService;
     }
+
+    private static final Logger LOG = LoggerFactory.getLogger(CrawlerBatchTask.class);
+
+    private AmazonDynamoDBAsync dynamoDBAsync;
+
+    private ICrawlerBatchService crawlerBatchService;
 
     @Override
     @JmsListener(destination = "CRAWL_WEBSITES")
@@ -58,8 +58,7 @@ public class CrawlerBatchTask implements ICrawlerBatchTask {
                 0
         ).blockLast();
 
-        if (result != null)
-        {
+        if (result != null) {
             putItemResultMono(urlString, EStatus.COMPLETED, result.getTitle(), result).block();
         }
     }
